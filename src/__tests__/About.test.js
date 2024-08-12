@@ -9,10 +9,10 @@ test("renders a <aside> element", () => {
 });
 
 test("renders a <img> with the blog logo and alt text of 'blog logo'", () => {
-  render(<About image={logo} />);
+  render(<About image={"logo.svg"} />);
   const img = screen.queryByAltText("blog logo");
   expect(img).toBeInTheDocument();
-  expect(img.src).toContain(logo);
+  expect(img.src).toContain("logo.svg");
 });
 
 test("uses a default value for the image if no image is passed as a prop", () => {
